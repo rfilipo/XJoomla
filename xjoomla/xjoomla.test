@@ -1,0 +1,28 @@
+<?php
+/**
+* Tests the functionality of the Simpletest example content type.
+*/
+class XjoomlaTestCase extends DrupalWebTestCase {
+    protected $privileged_user;
+
+	public static function getInfo() {
+	  // Note: getInfo() strings should not be translated.
+	  return array(
+		'name' => 'Tests for XJoomla module',
+		'description' => 'Test that xjoomla.module works properly.',
+		'group' => 'XJoomla',
+	  );
+	}
+	public function setUp() {
+	  // Enable any modules required for the test. This should be an array of
+	  // module names.
+	  parent::setUp(array('xjoomla'));
+	  // Create and log in our privileged user.
+	  $this->privileged_user = $this->drupalCreateUser(array(
+	    'create simpletest_example content',
+	    'extra special edit any simpletest_example',
+	    ));
+	  $this->drupalLogin($this->privileged_user);
+	}
+}
+?>

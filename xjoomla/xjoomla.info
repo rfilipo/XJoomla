@@ -1,0 +1,19 @@
+name = "xjoomla"
+description = "Migrate articles from old Joomla site"
+package = "Joomla"
+core = 7.x
+
+dependencies[] = taxonomy
+dependencies[] = image
+dependencies[] = comment
+dependencies[] = migrate
+dependencies[] = list
+dependencies[] = number
+
+
+#  include the files that contain your Migrate classes
+files[] = xjoomla.module
+files[] = xjoomla.test
+files[] = xjoomla.migrate.inc
+files[] = nodes.inc
+files[] = users.inc
