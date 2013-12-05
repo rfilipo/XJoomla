@@ -1,4 +1,4 @@
 XJoomla
 =======
 
-Drupal module for import Joomla 1.4 Stories. Dependes on Migrate.
+Drupal module to import Joomla 1.4 Stories. Dependes on Migrate.
